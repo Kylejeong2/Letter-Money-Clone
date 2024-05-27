@@ -25,7 +25,9 @@ struct TransactionCell: View {
             Text("$\(transaction.amount, specifier: "%.2f")")
                 .foregroundColor(.white)
         }
-        .padding(.vertical, 5)
+        .padding(20)
+        .background(Color.gray.opacity(0.2))
+        .cornerRadius(10)
     }
 }
 

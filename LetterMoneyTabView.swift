@@ -16,11 +16,13 @@ struct LetterMoneyTabView: View {
                         .tabItem {
                             Label("Activity", systemImage: "newspaper")
                         }
+                        .offset(y: -50)
                     
                     LettersView()
                         .tabItem {
                             Label("Letters", systemImage: "envelope")
                         }
+                        .offset(y: -50)
                     
                     AccountView()
                         .tabItem {
@@ -28,6 +30,7 @@ struct LetterMoneyTabView: View {
                         }
                     
                 }
+                
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button {
@@ -66,7 +69,6 @@ struct LetterMoneyTabView: View {
                     }
                 }
             }
-            
         }
     }
 }
