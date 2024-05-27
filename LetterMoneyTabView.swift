@@ -9,26 +9,25 @@ import SwiftUI
 
 struct LetterMoneyTabView: View {
     var body: some View {
+        
         ZStack {
+
             NavigationView {
                 TabView {
                     ActivityView()
                         .tabItem {
                             Label("Activity", systemImage: "newspaper")
                         }
-                        .offset(y: -50)
-                    
+
                     LettersView()
                         .tabItem {
                             Label("Letters", systemImage: "envelope")
                         }
-                        .offset(y: -50)
-                    
+
                     AccountView()
                         .tabItem {
                             Label("Account", systemImage: "person")
                         }
-                    
                 }
                 
                 .toolbar {
@@ -51,23 +50,24 @@ struct LetterMoneyTabView: View {
                             Image(systemName: "creditcard")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 35, height: 35)
+                                .frame(width: 30, height: 30)
                                 .accentColor(.secondary)
                         }
                     }
-
+                    
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            print("Quic move button tapped")
+                            print("Quick move button tapped")
                         } label: {
                             Image(systemName: "arrow.right.arrow.left")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 35, height: 35)
+                                .frame(width: 30, height: 30)
                                 .accentColor(.secondary)
                         }
                     }
                 }
+                .navigationBarTitleDisplayMode(.inline) // gets rid of space between nav and content
             }
         }
     }

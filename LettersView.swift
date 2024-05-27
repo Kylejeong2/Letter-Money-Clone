@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LettersView: View {
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -33,7 +34,6 @@ struct LettersView: View {
                 .cornerRadius(10)
             }
         }
-        .ignoresSafeArea()
     }
 }
 

@@ -26,9 +26,18 @@ struct AccountSettingsCard: View {
             
             //chevron arrow
             Image(systemName: "chevron.right")
-                .foregroundColor(.gray)
+                .foregroundColor(.white)
         }
-        .padding(5)
+        .padding()
+        .background(Color.black.opacity(0.8))
+        .overlay(
+            Rectangle()
+                .frame(height: 1)
+                .foregroundColor(Color.white),
+            alignment: .top
+        )
+        .cornerRadius(10)
+        .padding(.horizontal)
     }
 }
 
