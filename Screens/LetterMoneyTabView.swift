@@ -11,63 +11,63 @@ struct LetterMoneyTabView: View {
     
     var body: some View {
         
-        ZStack {
-            NavigationView {
-                TabView {
-                    ActivityView()
-                        .tabItem {
-                            Label("Activity", systemImage: "newspaper")
-                        }
-                    
-                    LettersView()
-                        .tabItem {
-                            Label("Letters", systemImage: "envelope")
-                        }
-                    
-                    AccountView()
-                        .tabItem {
-                            Label("Account", systemImage: "person")
-                        }
-                }
-                .transition(.move(edge: .leading))
-                // .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                // how to animate going between screens without having to manually create a
-                // tab bar
+        NavigationView {
+            
+            TabView {
+                ActivityView()
+                    .tabItem {
+                        Label("Activity", systemImage: "newspaper")
+                    }
                 
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        NavigationLink(destination: AccountView()) {
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 35, height: 35)
-                                .accentColor(.secondary)
-                        }
-                        
+                LettersView()
+                    .tabItem {
+                        Label("Letters", systemImage: "envelope")
+                    }
+                
+                AccountView()
+                    .tabItem {
+                        Label("Account", systemImage: "person")
+                    }
+            }
+            .transition(.move(edge: .leading))
+            //            .background(.black)
+            // .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+            // how to animate going between screens without having to manually create a
+            // tab bar
+            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: AccountView()) {
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 35, height: 35)
+                            .accentColor(.secondary)
                     }
                     
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: QuickMoveView()) {
-                            Image(systemName: "creditcard")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
-                                .accentColor(.secondary)
-                        }
-                    }
-                    
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: QuickMoveView()) {
-                            Image(systemName: "arrow.right.arrow.left")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
-                                .accentColor(.secondary)
-                        }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: AccountDetailsView()) {
+                        Image(systemName: "creditcard")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
+                            .accentColor(.secondary)
                     }
                 }
-                .navigationBarTitleDisplayMode(.inline) // gets rid of space between nav and content
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: QuickMoveView()) {
+                        Image(systemName: "arrow.right.arrow.left")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
+                            .accentColor(.secondary)
+                    }
+                }
             }
+            .navigationBarTitleDisplayMode(.inline) // gets rid of space between nav and content
         }
     }
 }

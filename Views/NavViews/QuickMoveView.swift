@@ -35,8 +35,8 @@ struct QuickMoveView: View {
             .background(Color("DarkGray").opacity(0.9))
             .cornerRadius(20)
             
-            VStack(alignment: .leading){
-                Section {
+            VStack {
+                VStack(alignment: .leading) {
                     Text("Fund account")
                         .font(.title2)
                         .fontWeight(.semibold)
@@ -49,7 +49,6 @@ struct QuickMoveView: View {
                         .padding(.horizontal)
                 }
 
-                
                 Spacer()
                     .frame(height: 15)
                 

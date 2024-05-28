@@ -11,20 +11,20 @@ struct SplashScreenView: View {
     @State private var isActive = false
     @State private var size = 0.8
     @State private var opacity = 0.5
+    @State private var isAnimated: Bool = false
     
     var body: some View {
         if isActive {
+            
             LetterMoneyTabView()
                 .preferredColorScheme(.dark)
+
         } else {
             VStack {
                 VStack {
                     Image(systemName: "envelope")
                         .font(.system(size: 80))
                         .foregroundColor(.white)
-                    //                    Text("Letter-Money")
-                    //                        .font(.system(size: 30))
-                    //                        .fontWeight(.bold)
                 }
                 .scaleEffect(size)
                 .opacity(opacity)
@@ -33,7 +33,6 @@ struct SplashScreenView: View {
                         self.size = 0.9
                         self.opacity = 1.0
                     }
-                    
                 }
             }
             .onAppear{

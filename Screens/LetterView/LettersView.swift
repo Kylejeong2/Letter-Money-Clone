@@ -16,7 +16,7 @@ struct LettersView: View {
                 BalanceCard(title: "Letters", total: 1400.00, other: 1600.00, balance: 3000.00, protected: 0.00)
                 
                 // Monthly Overview
-                MoneyCard(title: "May Spending") // will take curr.account later
+                LetterCard(title: "May Spending", amount: 2050) // will take curr.account later
                 
                 // Letters
                 VStack(alignment: .leading, spacing: 10) {

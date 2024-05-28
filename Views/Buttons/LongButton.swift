@@ -15,7 +15,7 @@ struct LongButton: View {
         Text(title)
             .font(.title3)
             .fontWeight(.semibold)
-            .frame(width: 350, height: 50)
+            .frame(width: 380, height: 50)
             .foregroundColor(.white)
             .background(color)
             .cornerRadius(10)
