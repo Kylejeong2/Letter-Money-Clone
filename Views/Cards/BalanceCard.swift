@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Balance : View {
+struct BalanceCard : View {
     
     let title: String
     let total: Double
@@ -56,6 +56,6 @@ struct Balance : View {
 
 struct Balance_Previews: PreviewProvider {
     static var previews: some View {
-        Balance(title: "Available", total: 1600.00, other: 1400.00, balance: 3000.00, protected: 0.00)
+        BalanceCard(title: "Available", total: 1600.00, other: 1400.00, balance: 3000.00, protected: 0.00)
     }
 }

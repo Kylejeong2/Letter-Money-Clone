@@ -17,7 +17,7 @@ struct Transaction: Identifiable {
 
 struct MockData {
     
-    static let transaction1 = Transaction(name: "Towers at Rincon Apartments", time: "5:52 PM", amount: 1500.00, icon: "house")
+    static let transaction1 = Transaction(name: "Apartment Rent", time: "5:52 PM", amount: 1500.00, icon: "house")
     static let transaction2 = Transaction(name: "Target", time: "5:21 PM", amount: 70.00, icon: "cart")
     static let transaction3 = Transaction(name: "AMC Theaters #123", time: "6:00 PM", amount: 60.00, icon: "film")
     static let transaction4 = Transaction(name: "Starbucks", time: "8:15 AM", amount: 5.25, icon: "cart")

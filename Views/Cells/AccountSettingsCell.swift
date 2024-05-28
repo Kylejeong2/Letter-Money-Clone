@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AccountSettingsCard: View {
+struct AccountSettingsCell: View {
     
     let image: String
     let title: String
@@ -43,7 +43,7 @@ struct AccountSettingsCard: View {
 
 struct AccountSettingsCard_Previews: PreviewProvider {
     static var previews: some View {
-        AccountSettingsCard(image: "checkmark.shield", title: "Two-Factor Auth")
+        AccountSettingsCell(image: "checkmark.shield", title: "Two-Factor Auth")
             .preferredColorScheme(.dark)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ActivityView.swift
+//  EnvelopesView.swift
 //  Letter-Money
 //
 //  Created by Kyle Jeong on 5/26/24.
@@ -7,26 +7,26 @@
 
 import SwiftUI
 
-struct ActivityView: View {
+struct LettersView: View {
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 // Balance
-                Balance(title: "Available", total: 1600.00, other: 1400.00, balance: 3000.00, protected: 0.00)
+                BalanceCard(title: "Letters", total: 1400.00, other: 1600.00, balance: 3000.00, protected: 0.00)
                 
                 // Monthly Overview
-                MoneyCard(title: "Overview") // will take curr.account later
+                MoneyCard(title: "May Spending") // will take curr.account later
                 
-                // Transactions
+                // Letters
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Transactions")
+                    Text("Letters")
                         .font(.title2)
                         .bold()
                         .padding(.bottom, 5)
                     
-                    ForEach(MockData.transactions) { transaction in
-                        TransactionCell(transaction: transaction)
+                    ForEach(MockLetters.letters) { letter in
+                        LetterCell(letter: letter)
                     }
                 }
                 .padding()
@@ -37,9 +37,9 @@ struct ActivityView: View {
     }
 }
 
-struct ActivityView_Previews: PreviewProvider {
+struct EnvelopesView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityView()
+        LettersView()
             .preferredColorScheme(.dark)
     }
 }

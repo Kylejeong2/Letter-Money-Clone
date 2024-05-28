@@ -11,7 +11,7 @@ import SwiftUI
 struct Letter_MoneyApp: App {
     var body: some Scene {
         WindowGroup {
-            LetterMoneyTabView()
+            SplashScreenView()
                 .preferredColorScheme(.dark)
         }
     }

@@ -33,16 +33,16 @@ struct AccountView: View {
                     .frame(height: 20)
                 
                 VStack {
-                    AccountSettingsCard(image: "checkmark.shield", title: "Two-factor auth")
-                    AccountSettingsCard(image: "creditcard", title: "Account details")
-                    AccountSettingsCard(image: "lifepreserver", title: "Support")
-                    AccountSettingsCard(image: "doc.text", title: "Documents")
+                    AccountSettingsCell(image: "checkmark.shield", title: "Two-factor auth")
+                    AccountSettingsCell(image: "creditcard", title: "Account details")
+                    AccountSettingsCell(image: "lifepreserver", title: "Support")
+                    AccountSettingsCell(image: "doc.text", title: "Documents")
                 }
                 .cornerRadius(20) /// make the background rounded
                 .overlay( /// apply a rounded border
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(.gray, lineWidth: 2)
-                    )
+                )
                 
                 Spacer()
                     .frame(height: 20)
@@ -62,13 +62,13 @@ struct AccountView: View {
                         .background(Color.black.opacity(0.8))
                         .cornerRadius(10)
                         .padding(.horizontal)
-                    AccountSettingsCard(image: "paintbrush", title: "App Icon")
+                    AccountSettingsCell(image: "paintbrush", title: "App Icon")
                 }
                 .cornerRadius(20) /// make the background rounded
                 .overlay( /// apply a rounded border
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(.gray, lineWidth: 2)
-                    )
+                )
                 
                 Spacer()
                     .frame(height: 20)
@@ -79,13 +79,15 @@ struct AccountView: View {
                     LongButton(color: Color("DarkRed"), title: "Log out")
                 }
                 
-                Text("Copy of Envelope Money\n By Kyle Jeong 2024")
+                Text("Copy of Envelope Money \n By Kyle Jeong 2024")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.secondary)
                     .frame(alignment: .center)
             }
         }
+        .padding(.top, 10)
+        .padding(.horizontal, 5)
     }
 }
 

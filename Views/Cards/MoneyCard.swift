@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MoneyCard: View {
     //    let account: Account
+    @State private var pick = 0
     let title: String
     
     var body: some View {
@@ -50,7 +51,7 @@ struct MoneyCard: View {
                 Text("11 expenses")
                     .foregroundColor(.gray)
             }
-            Picker("", selection: .constant(0)) {
+            Picker(selection: $pick, label: Text("")) {
                 Text("Monthly").tag(0)
                 Text("Yearly").tag(1)
             }
